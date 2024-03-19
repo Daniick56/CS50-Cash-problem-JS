@@ -11,3 +11,12 @@ function promptNaN(text) {
     return input;
 }
 
+//creating a function that recieves the change owed and returns the maximun amount of 25$ coin that can be used
+function calculate25(change) {
+    let contador25 = 0;
+    while (change >= 25) {
+        change -= 25;
+        contador25++;
+    }
+    return contador25;
+}
