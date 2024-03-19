@@ -20,3 +20,13 @@ function calculate25(change) {
     }
     return contador25;
 }
+
+//creating a function that recieves the change owed and returns the maximun amount of 25$ coin that can be used
+function calculate10(change) {
+    let contador10 = 0;
+    while (change >= 10) {
+        change -= 10;
+        contador10++;
+    }
+    return contador10;
+}
