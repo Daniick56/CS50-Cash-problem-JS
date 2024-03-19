@@ -50,3 +50,26 @@ function calculate1(change) {
     }
     return contador1;
 }
+
+//main function that recieves the change owed and uses the previous functions to return the addition of all the counters
+function coins(change) {
+    let remaining = 0;
+    let contador25 = calculate25(change);
+    remaining = change - (contador25 * 25);
+
+    let contador10 = calculate10(remaining);
+    remaining = remaining - (contador10 * 10);
+
+    let contador5 = calculate5(remaining);
+    remaining = remaining - (contador5 * 5);
+
+    let contador1 = calculate1(remaining);
+    remaining = remaining - (contador1 * 1);
+
+    let totalCoins = contador25 + contador10 + contador5 + contador1;
+
+    return `The minimun amount of coins used is : ${totalCoins}`;
+}
+
+//calling the function
+alert(coins(promptNaN("Enter the amount of money owed")));
