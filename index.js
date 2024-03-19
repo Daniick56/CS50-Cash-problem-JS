@@ -41,3 +41,12 @@ function calculate5(change) {
     return contador5;
 }
 
+//creating a function that recieves the change owed and returns the maximun amount of 1$ coin that can be used
+function calculate1(change) {
+    let contador1 = 0;
+    while (change >= 1) {
+        change -= 1;
+        contador1++;
+    }
+    return contador1;
+}
